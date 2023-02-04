@@ -12,8 +12,8 @@ TagManager:
   - Player
   - Water
   - UI
-  - 
-  - 
+  - Second Floor
+  - First Floor
   - 
   - 
   - 
@@ -45,9 +45,12 @@ TagManager:
   - name: Background
     uniqueID: 938098157
     locked: 0
+  - name: FirstFloor
+    uniqueID: 2374710505
+    locked: 0
+  - name: SecondFloor
+    uniqueID: 3007996013
+    locked: 0
   - name: Player
     uniqueID: 314168697
-    locked: 0
-  - name: New Layer 3
-    uniqueID: 3007996013
     locked: 0
