@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     private int itemsFound;
     private int plantsWater;
+    public int ingredientsPlaced;
 
     public GameObject spyGame;
     public GameObject spySucces;
@@ -32,16 +33,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        spyGame = GameObject.Find("I-Spy");
-        spySucces = GameObject.Find("SpySuccess");
-        spyTrigger = GameObject.Find("I-Spy Trigger");
-
-        plantGame = GameObject.Find("Plants");
-        plantSuccess = GameObject.Find("PlantSuccess");
-
-        potionGame = GameObject.Find("Potions");
-        potionSuccess = GameObject.Find("PotionSuccess");
-
         if (Instance != null)
         {
             Destroy(gameObject);
@@ -87,6 +78,12 @@ public class GameManager : MonoBehaviour
         {
             plantSuccess.SetActive(true);
         }
+
+        if(ingredientsPlaced == 3)
+        {
+            Debug.Log("Potion");
+            potionSuccess.SetActive(true);
+        }
     }
 
     public void playSpy()
@@ -101,6 +98,13 @@ public class GameManager : MonoBehaviour
         Debug.Log("Play Plant");
         plantGame.SetActive(true);
         plantSuccess.SetActive(false);
+    }
+
+    public void playPotion()
+    {
+        Debug.Log("Play Potion");
+        potionGame.SetActive(true);
+        potionSuccess.SetActive(false);
     }
 
     public void itemFound(GameObject item)
@@ -119,7 +123,6 @@ public class GameManager : MonoBehaviour
     public void closeGame(GameObject game)
     {
         game.SetActive(false);
-        itemsFound = 5; // This is a really dumb workaround, bear with me
     }
 
     public void closeTrigger(GameObject trigger)
