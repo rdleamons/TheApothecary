@@ -1,18 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool panelOpen = false;
+
+    public void ChangeScene(string scene)
     {
-        
+        SceneManager.LoadScene(scene);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void QuitGame()
     {
-        
+        Application.Quit();
+        Debug.Log("Quit");
+    }
+
+    public void TogglePanel(GameObject panel)
+    {
+        if(panelOpen)
+        {
+            panel.SetActive(false);
+            panelOpen = false;
+        }
+        else if(!panelOpen)
+        {
+            panel.SetActive(true);
+            panelOpen = true;
+        }
+            
     }
 }
