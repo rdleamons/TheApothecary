@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class GameManager : MonoBehaviour
     private int itemsFound;
     private int plantsWater;
     public int ingredientsPlaced;
+
+    public TextMeshProUGUI[] tasks;
+    public GameObject taskList;
 
     public GameObject spyGame;
     public GameObject spySucces;
@@ -72,17 +76,19 @@ public class GameManager : MonoBehaviour
         if(itemsFound == 3)
         {
             spySucces.SetActive(true);
+            tasks[2].text = "<s>- Find items in storage</s>";
         }
 
         if(plantsWater == 3)
         {
             plantSuccess.SetActive(true);
+            tasks[0].text = "<s>- Water Plants</s>";
         }
 
         if(ingredientsPlaced == 3)
         {
-            Debug.Log("Potion");
             potionSuccess.SetActive(true);
+            tasks[1].text = "<s>- Make Potion</s>";
         }
     }
 
@@ -91,6 +97,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Play I-Spy");
         spyGame.SetActive(true);
         spySucces.SetActive(false);
+        taskList.SetActive(false);
     }
 
     public void playPlant()
@@ -98,6 +105,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Play Plant");
         plantGame.SetActive(true);
         plantSuccess.SetActive(false);
+        taskList.SetActive(false);
     }
 
     public void playPotion()
@@ -105,6 +113,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Play Potion");
         potionGame.SetActive(true);
         potionSuccess.SetActive(false);
+        taskList.SetActive(false);
     }
 
     public void itemFound(GameObject item)
@@ -123,6 +132,7 @@ public class GameManager : MonoBehaviour
     public void closeGame(GameObject game)
     {
         game.SetActive(false);
+        taskList.SetActive(true);
     }
 
     public void closeTrigger(GameObject trigger)
