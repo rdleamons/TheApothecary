@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneChange : MonoBehaviour
 {
     public bool panelOpen = false;
+    public GameObject firstFloor;
     public GameObject secondFloor;
 
     public void Start()
@@ -29,11 +30,13 @@ public class SceneChange : MonoBehaviour
         if(panelOpen)
         {
             panel.SetActive(false);
+            firstFloor.SetActive(true);
             panelOpen = false;
         }
         else if(!panelOpen)
         {
             panel.SetActive(true);
+            firstFloor.SetActive(false);
             panelOpen = true;
         }
             
