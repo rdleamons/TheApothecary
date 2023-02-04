@@ -5,7 +5,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int itemsFound;
+    public GameObject spyGame;
     public GameObject spySucces;
+
+    public GameObject plantGame;
+    public GameObject plantSuccess;
+
+    public GameObject potionGame;
+    public GameObject potionSuccess;
 
     public void Update()
     {
@@ -15,16 +22,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void playSpy()
+    {
+        Debug.Log("Play I-Spy");
+        spyGame.SetActive(true);
+        spySucces.SetActive(false);
+    }
+
     public void itemFound(GameObject item)
     {
         item.SetActive(false);
         itemsFound++;
-        spySucces.SetActive(true);
     }
 
-    public void closeGame(GameObject game, GameObject prompt)
+    public void closeGame(GameObject game)
     {
         game.SetActive(false);
-        prompt.SetActive(false);
+    }
+
+    public void closeTrigger(GameObject trigger)
+    {
+        trigger.SetActive(false);
     }
 }

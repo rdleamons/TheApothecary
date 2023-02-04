@@ -62,6 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInRange: 0
+  text: {fileID: 0}
   interactKey: 101
   interactAction:
     m_PersistentCalls:
