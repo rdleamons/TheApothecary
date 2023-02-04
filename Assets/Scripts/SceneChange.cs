@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneChange : MonoBehaviour
 {
     public bool panelOpen = false;
+    public string nextFloor;
 
     public void ChangeScene(string scene)
     {
@@ -31,5 +32,11 @@ public class SceneChange : MonoBehaviour
             panelOpen = true;
         }
             
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+            SceneManager.LoadScene(nextFloor);
     }
 }
