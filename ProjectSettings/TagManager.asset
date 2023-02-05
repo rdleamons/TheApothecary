@@ -51,6 +51,9 @@ TagManager:
   - name: SecondFloor
     uniqueID: 3007996013
     locked: 0
+  - name: WallDecor
+    uniqueID: 2130691603
+    locked: 0
   - name: Player
     uniqueID: 314168697
     locked: 0

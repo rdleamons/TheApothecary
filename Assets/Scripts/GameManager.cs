@@ -34,6 +34,9 @@ public class GameManager : MonoBehaviour
     public GameObject potionGame;
     public GameObject potionSuccess;
 
+    public GameObject AuntUI;
+    public TextMeshProUGUI auntText;
+
 
     private void Awake()
     {
@@ -52,6 +55,7 @@ public class GameManager : MonoBehaviour
         spyGame.SetActive(false);
         plantGame.SetActive(false);
         potionGame.SetActive(false);
+        AuntUI.SetActive(false);
 
         if (MainManager.Instance != null)
         {
@@ -133,10 +137,40 @@ public class GameManager : MonoBehaviour
     {
         game.SetActive(false);
         taskList.SetActive(true);
+        Time.timeScale = 1f;
     }
 
     public void closeTrigger(GameObject trigger)
     {
         trigger.SetActive(false);
+    }
+
+    public void TalkToAunt()
+    {
+        Debug.Log("I'm here!");
+        Time.timeScale = 0f;
+        AuntUI.SetActive(true);
+        taskList.SetActive(false);
+
+        if (itemsFound == 3 & plantsWater == 3 & ingredientsPlaced == 3)
+        {
+            auntText.text = "Not bad. Keep it up, and you might actually start to like it here. Unlike Tony.";
+        }
+        else if(itemsFound == 3 & plantsWater == 3)
+        {
+            auntText.text = "Don't forget my potions. Miriam's coming to collect them this afternoon.";
+        }
+        else if (plantsWater == 3 & ingredientsPlaced == 3)
+        {
+            auntText.text = "The storage room is to your left. Don't dally.";
+        }
+        else if (itemsFound == 3 & ingredientsPlaced == 3)
+        {
+            auntText.text = "My flowers were looking awfully parched this morning. Do see to that.";
+        }
+        else
+        {
+            auntText.text = "Seems you still have some chores to attend to.";
+        }
     }
 }
