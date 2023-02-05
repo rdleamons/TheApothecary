@@ -16,7 +16,7 @@ public class Credits : MonoBehaviour
         secondsPast++;
         Debug.Log(secondsPast);
 
-        if(secondsPast >= 1200)
+        if(secondsPast >= 1000)
         {
             SceneManager.LoadScene(sceneName);
         }
