@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public SceneChange sc;
 
-    private int itemsFound;
-    private int plantsWater;
+    public int itemsFound;
+    public int plantsWater;
     public int ingredientsPlaced;
 
     public TextMeshProUGUI[] tasks;
@@ -198,13 +198,18 @@ public class GameManager : MonoBehaviour
     {
         if (itemsFound == 3 & plantsWater == 3 & ingredientsPlaced == 3)
         {
-
+            SceneManager.LoadScene("EndCreditsScene");
+            sleep();
         }
         else
         {
+            Debug.Log("No");
             AuntUI.SetActive(true);
             sc.uiOpen = true;
             auntText.text = "You'd better not be sleeping up there! You still have chores to do!";
+            Time.timeScale = 0.0f;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
