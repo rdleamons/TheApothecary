@@ -6,12 +6,16 @@ using UnityEngine.SceneManagement;
 public class SceneChange : MonoBehaviour
 {
     public bool panelOpen = false;
+    public bool uiOpen = false;
     public GameObject firstFloor;
     public GameObject secondFloor;
+    public GameObject AuntUI;
+    public GameObject taskList;
 
     public void Start()
     {
         secondFloor.SetActive(false);
+        AuntUI.SetActive(false);
     }
 
     public void ChangeScene(string scene)
@@ -40,5 +44,21 @@ public class SceneChange : MonoBehaviour
             panelOpen = true;
         }
             
+    }
+
+    public void ToggleUI(GameObject panel)
+    {
+        if (uiOpen)
+        {
+            panel.SetActive(false);
+            uiOpen = false;
+            taskList.SetActive(true);
+            Time.timeScale = 1.0f;
+        }
+        else if (!uiOpen)
+        {
+            panel.SetActive(true);
+            uiOpen = true;
+        }
     }
 }

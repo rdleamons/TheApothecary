@@ -194,7 +194,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 700
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
@@ -387,6 +387,7 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 8093713027717639744}
   camera: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!114 &536925
 MonoBehaviour:
   m_ObjectHideFlags: 0

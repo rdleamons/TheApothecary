@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public SceneChange sc;
 
     private int itemsFound;
     private int plantsWater;
@@ -36,6 +38,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject AuntUI;
     public TextMeshProUGUI auntText;
+
+    public TextMeshProUGUI playerText;
 
 
     private void Awake()
@@ -152,6 +156,8 @@ public class GameManager : MonoBehaviour
         AuntUI.SetActive(true);
         taskList.SetActive(false);
 
+        sc.uiOpen = true;
+
         if (itemsFound == 3 & plantsWater == 3 & ingredientsPlaced == 3)
         {
             auntText.text = "Not bad. Keep it up, and you might actually start to like it here. Unlike Tony.";
@@ -172,5 +178,26 @@ public class GameManager : MonoBehaviour
         {
             auntText.text = "Seems you still have some chores to attend to.";
         }
+    }
+
+    public void GoToBed()
+    {
+        if (itemsFound == 3 & plantsWater == 3 & ingredientsPlaced == 3)
+        {
+
+        }
+        else
+        {
+            AuntUI.SetActive(true);
+            sc.uiOpen = true;
+            auntText.text = "You'd better not be sleeping up there! You still have chores to do!";
+        }
+    }
+
+    private IEnumerator sleep()
+    {
+        playerText.text = "Time for bed...";
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Credits");
     }
 }
