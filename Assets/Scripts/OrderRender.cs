@@ -8,7 +8,7 @@ public class OrderRender : MonoBehaviour
     private int sortingOrderBase = 50;
 
     [SerializeField]
-    private int offset = 0;
+    private float offset = 0.0f;
 
     private SpriteRenderer rend;
 
