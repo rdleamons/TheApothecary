@@ -163,10 +163,12 @@ public class GameManager : MonoBehaviour
 
     public void TalkToAunt()
     {
-        Debug.Log("I'm here!");
         Time.timeScale = 0f;
         AuntUI.SetActive(true);
         taskList.SetActive(false);
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
 
         sc.uiOpen = true;
 
