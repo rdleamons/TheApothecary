@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Camera camera;
 
+    public Animator anim;
+
     Vector2 movement;
 
     Vector2 mousePos;
@@ -19,6 +21,11 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        anim.SetFloat("Horizontal", movement.x);
+        anim.SetFloat("Vertical", movement.y);
+        anim.SetFloat("Speed", movement.sqrMagnitude);
+
 
         mousePos = camera.ScreenToWorldPoint(Input.mousePosition);
     }
