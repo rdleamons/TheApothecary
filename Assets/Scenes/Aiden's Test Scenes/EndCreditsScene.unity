@@ -611,9 +611,6 @@ MonoBehaviour:
 
 
 
-    Scripts
-
-
     Fonts'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7bbf2f39c64fc4a46b7f9ff2b16f0aa0, type: 2}
@@ -754,7 +751,7 @@ MonoBehaviour:
     bigal13 of Freesound.org\r\n\"Boiling Water, Large, A.wav\" by InspectorJ of
     Freesound.org\r\n\"Bubbling, Large, A.wav\" by InspectorJ of Freesound.org\r\n\u201CSynth
     Texture 4\u201D by nomiqbomi of Freesound.org\r\n\u201CMagic Spell (Small Positive)\u201D
-    by Nakhas of Freesound.org\r\n\n\n\n\n\n\nIpsum\n\n\nhttps://www.dafont.com/quentin-2.font"
+    by Nakhas of Freesound.org\r\n\n\n\n\n\n\nhttps://www.dafont.com/quentin-2.font"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -9,9 +9,20 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject HUD;
 
+    public GameObject ispyUI;
+    public GameObject plantsUI;
+    public GameObject potionsUI;
+
     void Start()
     {
         pauseMenuUI.SetActive(false);
+        ispyUI.SetActive(false);
+        plantsUI.SetActive(false);
+        potionsUI.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1f;
+        isGamePaused = false;
     }
 
     // Update is called once per frame
@@ -37,11 +48,15 @@ public class PauseMenu : MonoBehaviour
         isGamePaused = false;
 
         HUD.SetActive(true);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void Pause()
     {
         HUD.SetActive(false);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
 
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;

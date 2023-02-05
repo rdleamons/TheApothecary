@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +103,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: IdleAuntShade_0
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 22
+        width: 372
+        height: 996
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a06aed7b11c597469e0d712315fc2d7
+      internalID: 1816448109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleAuntShade_1
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 22
+        width: 372
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f74bf11db6df54da6eea96805b73a7
+      internalID: 34708504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleAuntShade_2
+      rect:
+        serializedVersion: 2
+        x: 2354
+        y: 22
+        width: 372
+        height: 996
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970d008df8581a249ac63ee940db07d4
+      internalID: 26659723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleAuntShade_3
+      rect:
+        serializedVersion: 2
+        x: 3358
+        y: 22
+        width: 370
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830d69f7fb9133a4c82ec1f2f8258ac6
+      internalID: 2096093124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleAuntShade_4
+      rect:
+        serializedVersion: 2
+        x: 4394
+        y: 14
+        width: 372
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f7c233d795ae74d8039d702e25ceb8
+      internalID: 994758965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleAuntShade_5
+      rect:
+        serializedVersion: 2
+        x: 5422
+        y: 22
+        width: 373
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7f75d0cf25bfa4e89b5717c484259f
+      internalID: -1228934733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleAuntShade_6
+      rect:
+        serializedVersion: 2
+        x: 6454
+        y: 22
+        width: 372
+        height: 996
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad42e85129ebcf46b01e90e94dfbc4b
+      internalID: -683023637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleAuntShade_7
+      rect:
+        serializedVersion: 2
+        x: 7474
+        y: 22
+        width: 372
+        height: 996
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abdedecca86286e4486bc90fe50ab18d
+      internalID: 436714546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +282,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      IdleAuntShade_3: 2096093124
+      IdleAuntShade_2: 26659723
+      IdleAuntShade_6: -683023637
+      IdleAuntShade_1: 34708504
+      IdleAuntShade_7: 436714546
+      IdleAuntShade_0: 1816448109
+      IdleAuntShade_5: -1228934733
+      IdleAuntShade_4: 994758965
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

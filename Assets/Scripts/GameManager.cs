@@ -106,6 +106,9 @@ public class GameManager : MonoBehaviour
         spyGame.SetActive(true);
         spySucces.SetActive(false);
         taskList.SetActive(false);
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void playPlant()
@@ -114,6 +117,9 @@ public class GameManager : MonoBehaviour
         plantGame.SetActive(true);
         plantSuccess.SetActive(false);
         taskList.SetActive(false);
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void playPotion()
@@ -122,6 +128,9 @@ public class GameManager : MonoBehaviour
         potionGame.SetActive(true);
         potionSuccess.SetActive(false);
         taskList.SetActive(false);
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void itemFound(GameObject item)
@@ -142,6 +151,9 @@ public class GameManager : MonoBehaviour
         game.SetActive(false);
         taskList.SetActive(true);
         Time.timeScale = 1f;
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void closeTrigger(GameObject trigger)
