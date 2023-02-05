@@ -198,6 +198,6 @@ public class GameManager : MonoBehaviour
     {
         playerText.text = "Time for bed...";
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("EndCreditsScene");
     }
 }
